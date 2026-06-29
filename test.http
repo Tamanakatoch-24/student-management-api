@@ -1,0 +1,34 @@
+### Create a student
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+    "id" : 1
+  "name": "Ravi Kumar",
+  "email": "ravi@example.com",
+  "course": "Java",
+  "age": 21
+}
+
+### Get all students
+GET http://localhost:8080/students
+
+### Get student by ID
+GET http://localhost:8080/students/1
+
+### Update student
+PUT http://localhost:8080/students/1
+Content-Type: application/json
+
+{
+  "name": "Ravi Kumar Updated",
+  "email": "ravi@example.com",
+  "course": "Spring Boot",
+  "age": 22
+}
+
+### Delete student
+DELETE http://localhost:8080/students/1
+
+### Search by course (Bonus)
+GET http://localhost:8080/students/search?course=Java
